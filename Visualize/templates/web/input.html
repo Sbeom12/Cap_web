@@ -1,0 +1,20 @@
+<div>
+    <h2> [ INPUT ] </h2>
+    <h3> Enter the Voltage and Current</h3>
+    <form action="{% url 'web:index' %}" method="post">
+        {% csrf_token %}
+        Current : <input type="text" id="current" name="current"/>
+        <br><br>
+        Voltage : <input type="text" id="voltage" name="voltage"/>
+        <br><br>
+        <button>SUBMIT</button>
+    </form>
+</div>
+
+<div>
+    <h2> [ OUTPUT ] </h2>
+    <h3> RESULT <h3>
+        {% if result %}
+            {{ result }}
+        {% endif %}
+</div>
